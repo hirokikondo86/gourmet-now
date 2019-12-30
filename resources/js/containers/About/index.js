@@ -27,7 +27,7 @@ const styles = (theme) => ({
         textAlign: 'center',
         fontWeight: 'normal',
     },
-    subTtl:{
+    subTtl: {
         fontWeight: 'normal'
     },
     link: {
@@ -68,7 +68,7 @@ class About extends React.Component {
                         </p>
                         <div className={classes.paragraph}>
                             <ul>
-                                <li>AWS Amplify</li>
+                                <li>AWS</li>
                                 <li>ホットペッパーグルメ API・Google Maps API</li>
                                 <li>React・Redux・Material-UI・Laravel</li>
                             </ul>
@@ -76,18 +76,21 @@ class About extends React.Component {
                     </Paper>
                     <Paper className={classes.root} elevation={1}>
                         <h3 className={classes.subTtl}>
-                            ソース・説明など
+                            リンク
                         </h3>
                         <p className={classes.paragraph}>
-                            ソース：
                             <a className={classes.link} href="https://github.com/hirokikondo86/gourmet-now" target="_blank" rel="noopener noreferrer">
                                 GitHub
                             </a>
                         </p>
                         <p className={classes.paragraph}>
-                            説明：
-                            <a className={classes.link} href="https://qiita.com/hirokikondo86" target="_blank" rel="noopener noreferrer">   {/* TODO: Qiitaの記事リンク */}
-                                こちらで作り方解説
+                            <a className={classes.link} href="https://twitter.com/KHiroki86_" target="_blank" rel="noopener noreferrer">
+                                Twitter
+                            </a>
+                        </p>
+                        <p className={classes.paragraph}>
+                            <a className={classes.link} href="https://www.wantedly.com/users/125221850" target="_blank" rel="noopener noreferrer">
+                                Wantedly
                             </a>
                         </p>
                     </Paper>
@@ -96,27 +99,21 @@ class About extends React.Component {
                         <h3 className={classes.subTtl}>
                             自己紹介
                         </h3>
+                        <h4 className={classes.subTtl}>Works：</h4>
+                        <ul>
+                            <li>株式会社Combz Programmer</li>
+                            <li>株式会社サイバーエージェント TechKids School Mentor</li>
+                        </ul>
                         <p className={classes.paragraph}>
-                            <a className={classes.link} href="https://twitter.com/KHiroki86_" target="_blank" rel="noopener noreferrer">
-                                @MuscleEngineer_
-                            </a>
-                        </p>
-                        <p>
-                            Works：株式会社Combz Programmer / TechKids Mentor
-                        </p>
-                        <p className={classes.paragraph}>
-                            プログラミングを始めたばかりのIT系専門学校生。スポーツとモノを作る事が好き。
+                            IT系専門学校HAL大阪の２回生。スポーツと新しい物が大好き。
                         </p>
                         <p className={classes.paragraph}>
-                            Go、React、Laravel辺りを好んでやっています。
-                            <a className={classes.link} href="https://qiita.com/hirokikondo86" target="_blank" rel="noopener noreferrer">
-                                Qiita
-                            </a>
-                            でも記事投稿を始めましたので是非お遊びにいらして下さい。
+                            React, TypeScript, Java辺りを好んでやっています。
+                            現状、フロントエンド寄りですが、AWSやDocker等のインフラ周りにも興味があり、フロントエンド・バックエンド関係なく技術を楽しんでいます。
                         </p>
                         <p className={classes.paragraph}>
                             ご指摘・ご質問などは、
-                            <a className={classes.link} href="https://twitter.com/MuscleEngineer_" target="_blank" rel="noopener noreferrer">
+                            <a className={classes.link} href="https://twitter.com/KHiroki86_" target="_blank" rel="noopener noreferrer">
                                 Twitter
                             </a>
                             もしくは
@@ -125,7 +122,10 @@ class About extends React.Component {
                             </a>
                             よりご連絡下さい。
                         </p>
-                        <p className={classes.about}>※ 当アプリはジョークアプリとしてご利用下さい。</p>
+                        <p className={classes.about}>
+                            ※ 当アプリはジョークアプリとしてご利用下さい。<br />
+                            ※ 当アプリを使用した如何なる損害やトラブルの責任は一切負いかねますので予めご了承ください。
+                        </p>
                     </Paper>
                 </div>
             </div>
