@@ -250,11 +250,11 @@ class Signup extends React.Component {
                                 </tr>
                             </tbody>
                         </table>
-                            <Button onClick={this.handleSubmit} variant="contained" color="primary" className={classes.signupBtn}>
-                                {this.props.HttpReducer.isRequesting ? <CircularProgress /> : '登録'}
-                            </Button>
-                            <Button onClick={this.handleBack} variant="contained" color="secondary" className={classes.signupBtn}>
-                                変更
+                        <Button onClick={this.handleSubmit} variant="contained" color="primary" className={classes.signupBtn}>
+                            {this.props.HttpReducer.isRequesting ? <CircularProgress /> : '登録'}
+                        </Button>
+                        <Button onClick={this.handleBack} variant="contained" color="secondary" className={classes.signupBtn}>
+                            変更
                             </Button>
                     </div>
                 </div>
