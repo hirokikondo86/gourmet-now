@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { withStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 import IconButton from '@material-ui/core/IconButton'
@@ -72,8 +71,8 @@ class ShareDialog extends React.Component {
         const { classes } = this.props
 
         // シェアボタン用
-        const shareUrl = "https://animel.f-arts.work"   // TODO: 本場用に変更
-        const title = "ぐるめなう"
+        const shareUrl = "https://gourmet-now.site"
+        const title = "グルメなう【あなたの「なう」に合わせてお店をご提案】"
 
         return (
             <div>
@@ -106,6 +105,7 @@ class ShareDialog extends React.Component {
                         <TwitterShareButton
                             url={shareUrl}
                             title={title}
+                            hashtag="グルメなう"
                             className={classes.snsShareButton}>
                             <TwitterIcon
                                 size={48}
