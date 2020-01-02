@@ -14,6 +14,7 @@ const styles = (theme) => ({
     paragraph: {
         marginTop: 10,
         marginBottom: 10,
+        fontSize: 12
     },
     content: {
         [theme.breakpoints.up('md')]: {
@@ -28,7 +29,8 @@ const styles = (theme) => ({
         fontWeight: 'normal',
     },
     subTtl: {
-        fontWeight: 'normal'
+        fontWeight: 'bold',
+        marginBottom: 0
     },
     link: {
         textDecoration: 'none'
@@ -68,11 +70,63 @@ class About extends React.Component {
                         </p>
                         <div className={classes.paragraph}>
                             <ul>
-                                <li>AWS</li>
-                                <li>ホットペッパーグルメ API・Google Maps API</li>
-                                <li>React・Redux・Material-UI・Laravel</li>
+                                <li>フロントエンド：
+                                    <ul>
+                                        <li>React</li>
+                                        <li>Redux</li>
+                                        <li>Material-UI</li>
+                                    </ul>
+                                </li>
+                                <li>バックエンド：
+                                    <ul>
+                                        <li>Laravel</li>
+                                    </ul>
+                                </li>
+                                <li>クラウド：
+                                    <ul>
+                                        <li>AWS</li>
+                                    </ul>
+                                </li>
+                                <li>Web API：
+                                    <ul>
+                                        <li>Google Maps</li>
+                                        <li>ホットペッパーグルメ</li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
+                    </Paper>
+
+                    <Paper className={classes.root} elevation={1}>
+                        <h3 className={classes.subTtl}>
+                            プロフィール
+                        </h3>
+                        <h4 className={classes.subTtl}>Works：</h4>
+                        <p className={classes.paragraph}>株式会社Combz Programmer</p>
+                        <p className={classes.paragraph}>株式会社サイバーエージェント TechKids School Mentor</p>
+                        <h4 className={classes.subTtl}>自己紹介：</h4>
+                        <p className={classes.paragraph}>
+                            IT系専門学校HAL大阪の２回生。
+                        </p>
+                        <p className={classes.paragraph}>
+                            React, TypeScript, Kotlin辺りを好んでやっています。
+                            現状、フロントエンド寄りですが、AWSやDocker等のインフラ周りやKotlin（サーバーサイド）などにも興味があり、フロントエンド・バックエンド関係なく技術を楽しんでいます。
+                        </p>
+                        <h4 className={classes.subTtl}>趣味：</h4>
+                        <p className={classes.paragraph}>
+                            筋トレ、NBA観戦、プログラミング
+                        </p>
+                        <p className={classes.paragraph}>
+                            ご指摘・ご質問などは、
+                            <a className={classes.link} href="https://twitter.com/KHiroki86_" target="_blank" rel="noopener noreferrer">
+                                Twitter
+                            </a>
+                            もしくは
+                            <a className={classes.link} href="mailto:$kondo.h.0806@gmail.com" target="_blank" rel="noopener noreferrer">
+                                メール
+                            </a>
+                            よりご連絡下さい。
+                        </p>
                     </Paper>
                     <Paper className={classes.root} elevation={1}>
                         <h3 className={classes.subTtl}>
@@ -92,35 +146,6 @@ class About extends React.Component {
                             <a className={classes.link} href="https://www.wantedly.com/users/125221850" target="_blank" rel="noopener noreferrer">
                                 Wantedly
                             </a>
-                        </p>
-                    </Paper>
-
-                    <Paper className={classes.root} elevation={1}>
-                        <h3 className={classes.subTtl}>
-                            自己紹介
-                        </h3>
-                        <h4 className={classes.subTtl}>Works：</h4>
-                        <ul>
-                            <li>株式会社Combz Programmer</li>
-                            <li>株式会社サイバーエージェント TechKids School Mentor</li>
-                        </ul>
-                        <p className={classes.paragraph}>
-                            IT系専門学校HAL大阪の２回生。スポーツと新しい物が大好き。
-                        </p>
-                        <p className={classes.paragraph}>
-                            React, TypeScript, Java辺りを好んでやっています。
-                            現状、フロントエンド寄りですが、AWSやDocker等のインフラ周りにも興味があり、フロントエンド・バックエンド関係なく技術を楽しんでいます。
-                        </p>
-                        <p className={classes.paragraph}>
-                            ご指摘・ご質問などは、
-                            <a className={classes.link} href="https://twitter.com/KHiroki86_" target="_blank" rel="noopener noreferrer">
-                                Twitter
-                            </a>
-                            もしくは
-                            <a className={classes.link} href="mailto:$kondo.h.0806@gmail.com" target="_blank" rel="noopener noreferrer">
-                                メール
-                            </a>
-                            よりご連絡下さい。
                         </p>
                         <p className={classes.about}>
                             ※ 当アプリはジョークアプリとしてご利用下さい。<br />
