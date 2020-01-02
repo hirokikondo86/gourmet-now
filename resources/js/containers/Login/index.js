@@ -143,7 +143,7 @@ class LoginDialog extends React.Component {
                             <DialogContent>
                                 <TextField
                                     required
-                                    label="名前"
+                                    label="メールアドレス"
                                     name="mail"
                                     className={classes.input}
                                     onChange={e => this.handleOnChange(e)}
