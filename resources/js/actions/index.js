@@ -2,7 +2,7 @@ import * as actionTypes from "../utils/actionTypes"
 import axios from 'axios'
 
 const http = axios.create({
-  baseURL: 'http://localhost:8000/api/',
+  baseURL: 'https://gourmet-now.site/api/',
   timeout: 2000,
 })
 
