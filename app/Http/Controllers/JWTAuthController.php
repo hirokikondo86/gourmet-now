@@ -37,7 +37,7 @@ class JWTAuthController extends Controller
             return response()->json(['error' => 'Unauthorized'], 401);
         }
 
-        $favorites = Favorite::where('user_email', $req->email)->get(['id', 'title', 'catch', 'img_url', 'shop_url']);
+        $favorites = Favorite::where('user_email', $req->email)->get(['shop_id', 'title', 'catch', 'img_url', 'shop_url']);
 
         return $this->respondWithToken($token, $req->name, $favorites);
     }
@@ -61,7 +61,7 @@ class JWTAuthController extends Controller
             return response()->json(['error' => 'Unauthorized'], 401);
         }
 
-        $favorites = Favorite::where('user_email', $req->email)->get(['id', 'title', 'catch', 'img_url', 'shop_url']);
+        $favorites = Favorite::where('user_email', $req->email)->get(['shop_id', 'title', 'catch', 'img_url', 'shop_url']);
         $name = User::where('email', $req->email)->get('name');
         $name = $name[0]['name'];
 

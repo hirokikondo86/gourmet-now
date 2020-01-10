@@ -13,6 +13,7 @@ class CreateFavoritesTable extends Migration
     {
         Schema::create('favorites', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('shop_id');
             $table->string('user_email');
             $table->string('title');
             $table->string('catch');
