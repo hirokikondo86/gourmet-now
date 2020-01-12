@@ -101,7 +101,7 @@ class MyPage extends React.Component {
                                         <a href={fav.shop_url} target="_blank" className={classes.more}>Show More</a>
                                     </Button>
                                     <Button>
-                                        <p className={classes.star} onClick={() => this.handleToggle(fav.id, fav.title, fav.catch, fav.img_url, fav.shop_url)}><img src={star02} alt="like" width='30' id={fav.id} /></p>
+                                        <p className={classes.star} onClick={() => this.handleToggle(fav.shop_id, fav.title, fav.catch, fav.img_url, fav.shop_url)}><img src={star02} alt="like" width='30' id={fav.shop_id} /></p>
                                     </Button>
                                 </CardActions>
                                 {/* localstorageの該当shop_idのfavを消去 & DBの該当user_id, shop_idデータを非同期で消去 & localstorageから再取得*/}
