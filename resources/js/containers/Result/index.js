@@ -291,7 +291,7 @@ class Result extends React.Component {
         // いいね済みかチェック
         if (localStorage.getItem('token')) {
             const favorites = Array.from(JSON.parse(localStorage.getItem('favorites')))
-            const idx = getIndex(id, favorites, 'id')
+            const idx = getIndex(id, favorites, 'shop_id')
 
             if (idx != -1)
                 this.setState({ like: true })

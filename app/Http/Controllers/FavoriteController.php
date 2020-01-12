@@ -40,7 +40,7 @@ class FavoriteController extends Controller
         // いいねした店の情報を追加
         $favorite = new Favorite();
         $favorite->fill([
-            'shop_id'         => $req->id,
+            'shop_id'    => $req->id,
             'user_email' => $email,
             'title'      => $req->title,
             'catch'      => $req->catch,
