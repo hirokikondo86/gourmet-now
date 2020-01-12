@@ -121,6 +121,7 @@ class MyPage extends React.Component {
     }
 
     handleToggle = (id, title, cat, img, url) => {
+        console.log("a")
         const el = document.getElementById(id)
         console.log(el)
         if (el.alt == 'like') {
