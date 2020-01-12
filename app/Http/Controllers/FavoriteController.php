@@ -19,7 +19,7 @@ class FavoriteController extends Controller
         $user = Auth::guard('api')->user();
         $email = $user->email;
 
-        $favorites = Favorite::where('user_email', $email)->get(['id', 'title', 'catch', 'img_url', 'shop_url']);
+        $favorites = Favorite::where('user_email', $email)->get(['shop_id', 'title', 'catch', 'img_url', 'shop_url']);
 
         return response()->json([
             'favorites' => $favorites->toArray()
@@ -40,7 +40,7 @@ class FavoriteController extends Controller
         // いいねした店の情報を追加
         $favorite = new Favorite();
         $favorite->fill([
-            'id'         => $req->id,
+            'shop_id'         => $req->id,
             'user_email' => $email,
             'title'      => $req->title,
             'catch'      => $req->catch,
@@ -49,7 +49,7 @@ class FavoriteController extends Controller
         ])->save();
 
         // いいねの取得
-        $favorites = Favorite::where('user_email', $email)->get(['id', 'title', 'catch', 'img_url', 'shop_url']);
+        $favorites = Favorite::where('user_email', $email)->get(['shop_id', 'title', 'catch', 'img_url', 'shop_url']);
 
         return response()->json([
             'favorites' => $favorites
@@ -69,10 +69,10 @@ class FavoriteController extends Controller
         $shopId = $req->id;
 
         // いいねを消去
-        Favorite::where('id', $shopId)->delete();
+        Favorite::where('shop_id', $shopId)->delete();
 
         // いいねの取得
-        $favorites = Favorite::where('user_email', $email)->get(['id', 'title', 'catch', 'img_url', 'shop_url']);
+        $favorites = Favorite::where('user_email', $email)->get(['shop_id', 'title', 'catch', 'img_url', 'shop_url']);
 
         return response()->json([
             'favorites' => $favorites->toArray()
