@@ -122,6 +122,7 @@ class MyPage extends React.Component {
 
     handleToggle = (id, title, cat, img, url) => {
         const el = document.getElementById(id)
+        console.log(el)
         if (el.alt == 'like') {
             el.src = '../images/star.png'
             el.alt = 'liked'
