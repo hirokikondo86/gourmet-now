@@ -66,7 +66,6 @@ class MyPage extends React.Component {
         super(props)
         this.state = {
             favs: '',
-            a: ''
         }
     }
 
@@ -104,8 +103,6 @@ class MyPage extends React.Component {
                                     <Button>
                                         <p className={classes.star} onClick={() => this.handleToggle(fav.shop_id, fav.title, fav.catch, fav.img_url, fav.shop_url)}><img src={star02} alt="like" width='30' id={fav.shop_id} /></p>
                                     </Button>
-
-                            {this.state.a}
                                 </CardActions>
                                 {/* localstorageの該当shop_idのfavを消去 & DBの該当user_id, shop_idデータを非同期で消去 & localstorageから再取得*/}
                             </Card>
@@ -125,7 +122,6 @@ class MyPage extends React.Component {
 
     handleToggle = (id, title, cat, img, url) => {
         const el = document.getElementById(id)
-        this.setState({a: el})
         if (el.alt == 'like') {
             el.src = '../images/star.png'
             el.alt = 'liked'
