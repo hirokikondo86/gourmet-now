@@ -1,7 +1,10 @@
-# グルメなう(現在開発中…)
+# グルメなう
 ## 概要
 
 あなたの「なう」に合わせてお店をご提案。
+
+## URL
+https://gourmet-now.site
 
 ## 技術仕様
 
@@ -36,7 +39,7 @@
 
 ## Author
 
-[@MuscleEngineer_](https://twitter.com/MuscleEngineer_)
+[@KHiroki86_](https://twitter.com/KHiroki86_)
 
 ## License
 
